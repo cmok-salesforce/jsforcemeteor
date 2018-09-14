@@ -1,26 +1,17 @@
-require('dotenv').config()
-var PropertiesReader = require('properties-reader');
-var properties = PropertiesReader(process.env.ANT_BUILD_FILE);
-const yargs  = require('yargs');
-const argv = yargs.argv
 const myutils = require('../myutils');
 
-console.log('*** yargs arguments = ' + argv);
-console.log('*** Build.properties = ' + process.env.ANT_BUILD_FILE);
-console.log('*** username = ' + properties.get('sf.devciam.username'));
-
+console.log('*** yargs=' + myutils.yargs.argv);
 return 0;
-
 //Salesforce Parameters
-var username = properties.get('sf.devciam.username');
-var password = properties.get('sf.devciam.password');
+var username = myutils.properties.get('sf.devciam.username');
+var password = myutils.properties.get('sf.devciam.password');
 var loginEndpoint = 'https://test.salesforce.com';
 var useoauth = false;
 var oauthparams = {
     loginUrl: loginEndpoint,
-    clientId: properties.get('sf.devciam.APIM_CIAM.consumer_id'),
-    clientSecret: properties.get('sf.devciam.APIM_CIAM.consumer_secret'),
-        redirectUri: properties.get('sf.devciam.APIM_CIAM.callback_url')
+    clientId: myutils.properties.get('sf.devciam.APIM_CIAM.consumer_id'),
+    clientSecret: myutils.properties.get('sf.devciam.APIM_CIAM.consumer_secret'),
+    redirectUri: myutils.properties.get('sf.devciam.APIM_CIAM.callback_url')
 }
 
 //request for updates in days starting backwards from current date.

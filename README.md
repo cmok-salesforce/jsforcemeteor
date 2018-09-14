@@ -6,4 +6,4 @@
 * npm install dotenv --save
 * npm install jsforce --save
 * npm install progress --save
-* npm i yargs --save
+* npm yargs --save
