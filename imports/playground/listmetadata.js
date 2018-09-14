@@ -35,7 +35,7 @@ else {
     });
 }
 var ProgressBar = require('progress');
-conn.login(sfusername, sfpassword, function (err, userInfo) {
+conn.login(username, password, function (err, userInfo) {
     if (err) { console.log(err) }
     console.log('you are connected to ');
     console.log(userInfo);
