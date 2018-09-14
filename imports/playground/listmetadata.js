@@ -1,9 +1,15 @@
 require('dotenv').config()
 var PropertiesReader = require('properties-reader');
 var properties = PropertiesReader(process.env.ANT_BUILD_FILE);
+const yargs  = require('yargs');
+const argv = yargs.argv
+const myutils = require('../myutils');
 
+console.log('*** yargs arguments = ' + argv);
 console.log('*** Build.properties = ' + process.env.ANT_BUILD_FILE);
 console.log('*** username = ' + properties.get('sf.devciam.username'));
+
+return 0;
 
 //Salesforce Parameters
 var username = properties.get('sf.devciam.username');
