@@ -1,17 +1,22 @@
-const myutils = require('../../utils/myutils.js');
+'use strict';
 
-console.log('*** yargs=' + myutils.yargs.argv);
-return 0;
-//Salesforce Parameters
-var username = myutils.properties.get('sf.devciam.username');
-var password = myutils.properties.get('sf.devciam.password');
+const myutils = require('../../utils/myutils.js');
+var program = require('commander');
+program
+    .version('1.0', '-v, --version')
+    .option('-e, --env <environment>', 'Environement define in your build.properties')
+    .option('-c, --connected-app <connected_app_api_name>', 'API Name of your connected app')
+    .parse(process.argv);
+
+var username = myutils.properties.get(`sf.${program.env}.username`);
+var password = myutils.properties.get(`sf.${program.env}.password`);
 var loginEndpoint = 'https://test.salesforce.com';
 var useoauth = false;
 var oauthparams = {
     loginUrl: loginEndpoint,
-    clientId: myutils.properties.get('sf.devciam.APIM_CIAM.consumer_id'),
-    clientSecret: myutils.properties.get('sf.devciam.APIM_CIAM.consumer_secret'),
-    redirectUri: myutils.properties.get('sf.devciam.APIM_CIAM.callback_url')
+    clientId: myutils.properties.get(`sf.${program.env}.${program.connectedApp}.consumer_id`),
+    clientSecret: myutils.properties.get(`sf.${program.env}.${program.connectedApp}.consumer_secret`),
+    redirectUri: myutils.properties.get(`sf.${program.env}.${program.connectedApp}.callback_url`)
 }
 
 //request for updates in days starting backwards from current date.

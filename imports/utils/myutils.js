@@ -1,7 +1,6 @@
 require('dotenv').config()
 var PropertiesReader = require('properties-reader');
 var properties = PropertiesReader(process.env.ANT_BUILD_FILE);
-const yargs = require('yargs');
 const util = require('util');
 
 var debug = () => {
@@ -19,11 +18,8 @@ var inspect = (myObject) => {
     console.log('*** ' + util.inspect(myObject, false, null, true /* enable colors */));
 };
 
-debug();
-
 module.exports = {
     properties,
-    yargs,
     debug,
     inspect
 }
