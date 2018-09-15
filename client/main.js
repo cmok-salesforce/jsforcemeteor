@@ -1,3 +1,4 @@
+console.log('*** log from client/main.js');
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
