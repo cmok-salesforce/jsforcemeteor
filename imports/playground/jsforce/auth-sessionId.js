@@ -12,17 +12,17 @@ if (process.argv.length != 4) return program.help();
 var myutils = require('../../utils/myutils.js');
 
 const conn = new jsforce.Connection({
-    instanceUrl: myutils.properties.get(`sf.${program.env}.serverUrl`),
+    serverUrl: myutils.properties.get(`sf.${program.env}.serverUrl`),
     sessionId: myutils.properties.get(`sf.${program.env}.sessionId`),
     logLevel : "DEBUG"
 });
 
 
-    conn.query('SELECT Id, Name FROM Account', function (err, res) {
-        if (err) {
-            return console.error(err);
-        }
-        console.log(res);
-    });
+conn.query('SELECT Id, Name FROM Account', function (err, res) {
+    if (err) {
+        return console.error(err);
+    }
+    console.log(res);
+});
 
 

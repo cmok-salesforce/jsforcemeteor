@@ -1,5 +1,6 @@
 # Meteor Packages
 * meteor add nourharidy:ssl
+* meteor npm install --save babel-runtime react react-dom classnames
 
 # Node Packages Global
 * npm install nodemon -g

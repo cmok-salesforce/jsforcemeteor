@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "lmd": "node imports/playground/jsforce/listmetadata.js",
-    "ant" : "cd ~/Dropbox/automation/bash_scripts/sfdcant/",
+    "ant": "cd ~/Dropbox/automation/bash_scripts/sfdcant/",
     "start": "meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
@@ -11,19 +11,16 @@
   },
   "dependencies": {
     "@babel/runtime": "7.0.0-beta.55",
+    "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.6",
     "commander": "^2.18.0",
     "dotenv": "^6.0.0",
     "jsforce": "^1.9.1",
     "meteor-node-stubs": "^0.4.1",
     "progress": "^2.0.0",
     "properties-reader": "0.0.16",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
     "yargs": "^12.0.2"
-  },
-  "meteor": {
-    "mainModule": {
-      "client": "client/main.js",
-      "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
   }
 }
