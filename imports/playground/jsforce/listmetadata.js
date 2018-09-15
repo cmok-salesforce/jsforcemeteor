@@ -1,4 +1,4 @@
-const myutils = require('../myutils');
+const myutils = require('../../utils/myutils.js');
 
 console.log('*** yargs=' + myutils.yargs.argv);
 return 0;

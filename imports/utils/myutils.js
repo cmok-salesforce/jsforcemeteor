@@ -3,7 +3,6 @@ var PropertiesReader = require('properties-reader');
 var properties = PropertiesReader(process.env.ANT_BUILD_FILE);
 const yargs = require('yargs');
 const util = require('util');
-const argv = yargs.argv
 
 var debug = () => {
     console.log('*** inside myutils');

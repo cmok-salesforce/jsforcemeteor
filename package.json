@@ -2,6 +2,8 @@
   "name": "jsforcemeteor",
   "private": true,
   "scripts": {
+    "lmd": "node imports/playground/jsforce/listmetadata.js",
+    "ant" : "cd ~/Dropbox/automation/bash_scripts/sfdcant/",
     "start": "meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
