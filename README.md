@@ -18,6 +18,7 @@
 # MongoDB
 * meteor mongo
     * mongodb://127.0.0.1:3001/meteor
+    * metor must be shutdown : meteor reset  // wiping database
 ```
     show dbs
     db.players.find()
