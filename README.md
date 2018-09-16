@@ -13,4 +13,15 @@
 * npm install yargs --save
 * npm install commander --save
 * npm install pjson --save
-* 
+
+
+# MongoDB
+* meteor mongo
+    * mongodb://127.0.0.1:3001/meteor
+```
+    show dbs
+    db.players.find()
+    use local
+
+```
+
