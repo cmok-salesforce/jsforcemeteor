@@ -56,7 +56,7 @@ Meteor.startup( () => {
         <p>This is my second p.</p>
         {renderPlayers(players)}
         {/* WARNING: do not provide () after the handleSubmit, otherwise event is not defined */}
-        <form onSubmit={handleSubmit }>
+        <form onSubmit={handleSubmit}>
           <input type="text" name="playerName" placeholder="Player name"/>
           <button>Add Player</button>
         </form>
