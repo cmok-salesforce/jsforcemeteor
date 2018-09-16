@@ -4,19 +4,6 @@ import { Meteor } from 'meteor/meteor';
 import { Players } from './../imports/api/players.js';
 import { Tracker } from 'meteor/tracker';
 
-Tracker.autorun(()=> {
-  console.log('*** playerList:', Players.find().fetch());  
-});
-
-const players = [{
-  _id: '1',
-  name: 'Lauren',
-  score: 102
-}, {
-  _id: '3',
-  name: 'Andrew',
-  score: -12
-}];
 
 const renderPlayers = function (playersList) {
   return playersList.map(function (player) {
@@ -25,15 +12,21 @@ const renderPlayers = function (playersList) {
 };
 
 Meteor.startup(function () {
-  let title = 'Score Keep';
-  let name = 'Mike';
-  let jsx = (
-    <div>
-      <h1>{title}</h1>
-      <p>Hello {name}!</p>
-      <p>This is my second p.</p>
-      {renderPlayers(players)}
-    </div>
-  );
-  ReactDOM.render(jsx, document.getElementById('app'));
+  //DDP Synch with MonDB on server side 
+  Tracker.autorun(() => {
+    let players = Players.find().fetch();
+    console.log('*** playerList:', players);
+    let title = 'Score Keep';
+    let name = 'Mike';
+    let jsx = (
+      <div>
+        <h1>{title}</h1>
+        <p>Hello {name}!</p>
+        <p>This is my second p.</p>
+        {renderPlayers(players)}
+      </div>
+    );
+    ReactDOM.render(jsx, document.getElementById('app'));
+    });
+  return ;
 });
