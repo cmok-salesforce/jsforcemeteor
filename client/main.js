@@ -8,7 +8,17 @@ var fileHelper = require('./../imports/helpers/fileHelper.js');
 
 const renderPlayers =  (playersList) => {
   return playersList.map( (player) => {
-    return <p key={player._id}>{player.name} has {player.score} point(s).</p>;
+    //parenthesis allow jsx on multiple line for better formatting
+    return (
+    <p key={player._id}>
+      {player.name} has {player.score} point(s).
+      <button onClick={
+        () => {
+          alert('to delete');
+        }
+      }>X</button>
+    </p>
+    );
   });
 };
 
@@ -31,8 +41,6 @@ const handleSubmit =  (e) => {
       score: 0
     });  
   } 
-
-
 
 } 
 

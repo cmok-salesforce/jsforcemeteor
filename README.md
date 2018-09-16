@@ -23,7 +23,8 @@
 ```
     show dbs
     db.players.find()
-    use local
+    db.players.find({name:'dada'})
+    db.players.remove({_id:'jmxQgiPdKgF6yP94k'})
 
 ```
 
