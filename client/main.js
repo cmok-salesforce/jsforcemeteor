@@ -6,18 +6,9 @@ import { Tracker } from 'meteor/tracker';
 import TitleBar from '../imports/ui/TitleBar.js';
 import AddPlayer from '../imports/ui/AddPlayer.js';
 import Player from '../imports/ui/Player.js';
+import PlayerList from '../imports/ui/PlayerList.js';
 //import { greetUser, writeFileSync } from '../imports/helpers/fileHelper.js';
 var fileHelper = require('./../imports/helpers/fileHelper.js');
-
-const renderPlayers =  (playersList) => {
-  return playersList.map( (player) => {
-    //parenthesis allow jsx on multiple line for better formatting
-    //WARNING: Each child in an array or iterator should have a unique "key" prop.
-    return <Player key={player._id} player={player}/>;
-  });
-};
-
-
 
 Meteor.startup( () => {
   //DDP Synch with MonDB on server side 
@@ -29,7 +20,7 @@ Meteor.startup( () => {
     let jsx = (
       <div>
         <TitleBar title={title} subtitle={subtitle}/>
-        {renderPlayers(players)}
+        <PlayerList players={players}/>
         <AddPlayer score={10}/>
       </div>
     );
