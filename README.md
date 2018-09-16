@@ -13,6 +13,7 @@
 * npm install yargs --save
 * npm install commander --save
 * npm install pjson --save
+* npm install browserfs --save
 
 
 # MongoDB

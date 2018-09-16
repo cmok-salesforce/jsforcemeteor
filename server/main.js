@@ -10,4 +10,5 @@ if (Meteor.isServer) {
 Meteor.startup(() => {
   //return array of documents
   console.log(Players.find().fetch());
+
 });
