@@ -6,7 +6,7 @@ import { Tracker } from 'meteor/tracker';
 import TitleBar from '../imports/ui/TitleBar.js';
 import AddPlayer from '../imports/ui/AddPlayer.js';
 //import { greetUser, writeFileSync } from '../imports/helpers/fileHelper.js';
-//var fileHelper = require('./../imports/helpers/fileHelper.js');
+var fileHelper = require('./../imports/helpers/fileHelper.js');
 
 const renderPlayers =  (playersList) => {
   return playersList.map( (player) => {
@@ -50,9 +50,10 @@ Meteor.startup( () => {
     let players = Players.find().fetch();
     console.log('*** playerList:', players);
     let title = 'Score Keep';
+    let subtitle = 'Created by Andrew Mead.'
     let jsx = (
       <div>
-        <TitleBar/>
+        <TitleBar title={title} subtitle={subtitle}/>
         {renderPlayers(players)}
         <AddPlayer/>
         {/* WARNING: do not provide () after the handleSubmit, otherwise event is not defined */}

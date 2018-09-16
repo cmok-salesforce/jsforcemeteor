@@ -19,6 +19,7 @@
     "jsforce": "^1.9.1",
     "meteor-node-stubs": "^0.4.1",
     "progress": "^2.0.0",
+    "prop-types": "^15.6.2",
     "properties-reader": "0.0.16",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",

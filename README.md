@@ -14,6 +14,8 @@
 * npm install commander --save
 * npm install pjson --save
 * npm install browserfs --save
+* npm install --save prop-types
+
 
 
 # MongoDB
@@ -29,3 +31,6 @@
     db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$inc: {score:1}})  // increment score by +1
 ```
 
+# Reference
+* https://reactjs.org/docs/typechecking-with-proptypes.html
+* 
