@@ -56,11 +56,6 @@ Meteor.startup( () => {
         <TitleBar title={title} subtitle={subtitle}/>
         {renderPlayers(players)}
         <AddPlayer/>
-        {/* WARNING: do not provide () after the handleSubmit, otherwise event is not defined */}
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="playerName" placeholder="Player name"/>
-          <button>Add Player</button>
-        </form>
       </div>
     );
     ReactDOM.render(jsx, document.getElementById('app'));

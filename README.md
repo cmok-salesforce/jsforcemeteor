@@ -1,6 +1,7 @@
 # Meteor Packages
 * meteor add nourharidy:ssl
 * meteor npm install --save babel-runtime react react-dom classnames
+* meteor npm install --save prop-types
 
 # Node Packages Global
 * npm install nodemon -g
@@ -14,7 +15,6 @@
 * npm install commander --save
 * npm install pjson --save
 * npm install browserfs --save
-* npm install --save prop-types
 
 
 
@@ -33,4 +33,4 @@
 
 # Reference
 * https://reactjs.org/docs/typechecking-with-proptypes.html
-* 
+* https://babeljs.io/repl
