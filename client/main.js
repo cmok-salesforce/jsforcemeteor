@@ -6,13 +6,13 @@ import { Tracker } from 'meteor/tracker';
 //import { greetUser, writeFileSync } from '../imports/helpers/fileHelper.js';
 var fileHelper = require('./../imports/helpers/fileHelper.js');
 
-const renderPlayers = function (playersList) {
-  return playersList.map(function (player) {
+const renderPlayers =  (playersList) => {
+  return playersList.map( (player) => {
     return <p key={player._id}>{player.name} has {player.score} point(s).</p>;
   });
 };
 
-const handleSubmit = function (e) {
+const handleSubmit =  (e) => {
   console.log('*** event:', e);
   console.log('*** greetUser:', fileHelper.greetUser());
   // preventing page post & full page reload
@@ -36,9 +36,9 @@ const handleSubmit = function (e) {
 
 } 
 
-Meteor.startup(function () {
+Meteor.startup( () => {
   //DDP Synch with MonDB on server side 
-  Tracker.autorun(() => {
+  Tracker.autorun( () => {
     let players = Players.find().fetch();
     console.log('*** playerList:', players);
     let title = 'Score Keep';
