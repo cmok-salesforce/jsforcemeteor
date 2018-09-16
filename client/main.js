@@ -42,18 +42,25 @@ const handleSubmit =  (e) => {
 
 } 
 
+class TitleBar extends React.Component {
+  render() {
+    return(
+      <div>
+          <h1> My App Name </h1>
+      </div>
+    );
+  }
+}
+
 Meteor.startup( () => {
   //DDP Synch with MonDB on server side 
   Tracker.autorun( () => {
     let players = Players.find().fetch();
     console.log('*** playerList:', players);
     let title = 'Score Keep';
-    let name = 'Mike';
     let jsx = (
       <div>
-        <h1>{title}</h1>
-        <p>Hello {name}!</p>
-        <p>This is my second p.</p>
+        <TitleBar/>
         {renderPlayers(players)}
         {/* WARNING: do not provide () after the handleSubmit, otherwise event is not defined */}
         <form onSubmit={handleSubmit}>
