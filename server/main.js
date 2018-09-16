@@ -8,10 +8,6 @@ if (Meteor.isServer) {
 }
 
 Meteor.startup(() => {
-  Players.insert({
-    name: 'Andrew',
-    score: 3
-  });
   //return array of documents
   console.log(Players.find().fetch());
 });

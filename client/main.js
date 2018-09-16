@@ -28,5 +28,8 @@ Meteor.startup(function () {
     );
     ReactDOM.render(jsx, document.getElementById('app'));
     });
-  return ;
+    Players.insert({
+      name: 'Chenda',
+      score: 88
+    });
 });
