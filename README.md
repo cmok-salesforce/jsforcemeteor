@@ -25,6 +25,7 @@
     db.players.find()
     db.players.find({name:'dada'})
     db.players.remove({_id:'jmxQgiPdKgF6yP94k'})
-
+    db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$set: {score:99}})
+    db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$inc: {score:1}})  // increment score by +1
 ```
 
