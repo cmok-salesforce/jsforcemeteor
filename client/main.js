@@ -15,6 +15,10 @@ const renderPlayers = function (playersList) {
 const handleSubmit = function (e) {
   console.log('*** event:', e);
   console.log('*** greetUser:', fileHelper.greetUser());
+  // preventing page post & full page reload
+  // TODO: Uncaught TypeError: Cannot read property 'target' of undefined
+  // SOL: we must call handleSubmit(this.event) to pass the vent object to the function call
+  e.preventDefault();
   
   // TODO: Uncaught TypeError: Cannot read property 'value' of undefined
   let playerName = e.target.playerName.value;
@@ -27,10 +31,6 @@ const handleSubmit = function (e) {
       score: 0
     });  
   } 
-  // preventing page post & full page reload
-  // TODO: Uncaught TypeError: Cannot read property 'target' of undefined
-  // SOL: we must call handleSubmit(this.event) to pass the vent object to the function call
-  e.preventDefault();
 
 
 
@@ -49,7 +49,8 @@ Meteor.startup(function () {
         <p>Hello {name}!</p>
         <p>This is my second p.</p>
         {renderPlayers(players)}
-        <form onSubmit={handleSubmit}>
+        {/* WARNING: do not provide () after the handleSubmit, otherwise event is not defined */}
+        <form onSubmit={handleSubmit }>
           <input type="text" name="playerName" placeholder="Player name"/>
           <button>Add Player</button>
         </form>
