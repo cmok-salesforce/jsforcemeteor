@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { Players } from './../imports/api/players.js';
 import { Tracker } from 'meteor/tracker';
+import TitleBar from '../imports/ui/TitleBar.js';
+import AddPlayer from '../imports/ui/AddPlayer.js';
 //import { greetUser, writeFileSync } from '../imports/helpers/fileHelper.js';
-var fileHelper = require('./../imports/helpers/fileHelper.js');
+//var fileHelper = require('./../imports/helpers/fileHelper.js');
 
 const renderPlayers =  (playersList) => {
   return playersList.map( (player) => {
@@ -42,16 +44,6 @@ const handleSubmit =  (e) => {
 
 } 
 
-class TitleBar extends React.Component {
-  render() {
-    return(
-      <div>
-          <h1> My App Name </h1>
-      </div>
-    );
-  }
-}
-
 Meteor.startup( () => {
   //DDP Synch with MonDB on server side 
   Tracker.autorun( () => {
@@ -62,6 +54,7 @@ Meteor.startup( () => {
       <div>
         <TitleBar/>
         {renderPlayers(players)}
+        <AddPlayer/>
         {/* WARNING: do not provide () after the handleSubmit, otherwise event is not defined */}
         <form onSubmit={handleSubmit}>
           <input type="text" name="playerName" placeholder="Player name"/>
