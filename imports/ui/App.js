@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
+import TitleBar from './TitleBar.js';
+import AddPlayer from './AddPlayer.js';
+import PlayerList from './PlayerList.js';
+import PropTypes from 'prop-types'; // ES6
+
 
 // App component - represents the whole app
 export default class App extends Component {
     render() {
+        let subtitle = 'Created by Andrew Mead.'
         return (    
             <div>
-                <header>
-                    <h1>Todo List</h1>
-                </header>
+                <TitleBar title={this.props.title} subtitle={subtitle} />
+                <PlayerList players={this.props.players} />
+                <AddPlayer score={10} />
             </div>
         );
     }
+}
+
+App.propTypes = {
+    title: PropTypes.string.isRequired,
+    players: PropTypes.array.isRequired
 }

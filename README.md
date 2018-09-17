@@ -29,8 +29,11 @@
     db.players.remove({_id:'jmxQgiPdKgF6yP94k'})
     db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$set: {score:99}})
     db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$inc: {score:1}})  // increment score by +1
+    db.players.find().sort({score:-1}) //sorting ascending
 ```
 
 # Reference
 * https://reactjs.org/docs/typechecking-with-proptypes.html
 * https://babeljs.io/repl
+* https://docs.mongodb.com/manual/reference/method/cursor.sort/
+* https://docs.meteor.com/api/collections.html#sortspecifiers
