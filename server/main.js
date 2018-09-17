@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Players } from './../imports/api/players.js';
+import { Players } from '../imports/api/scorekeep/players.js';
 
 
 if (Meteor.isServer) {
@@ -10,5 +10,4 @@ if (Meteor.isServer) {
 Meteor.startup(() => {
   //return array of documents
   console.log(Players.find().fetch());
-
 });

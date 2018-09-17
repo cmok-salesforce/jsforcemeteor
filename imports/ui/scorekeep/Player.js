@@ -1,7 +1,7 @@
 import React from 'react';
-import { Players } from './../api/players.js';
+import { Players } from '../../api/scorekeep/players.js';
 import PropTypes from 'prop-types'; // ES6
-var fileHelper = require('../helpers/fileHelper.js');
+var fileHelper = require('../../helpers/fileHelper.js');
 
 export default class Player extends React.Component {
     render() {

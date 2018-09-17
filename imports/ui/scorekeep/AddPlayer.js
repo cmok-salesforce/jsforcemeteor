@@ -1,6 +1,6 @@
 import React from 'react';
-import { Players } from './../api/players.js';
-var fileHelper = require('../helpers/fileHelper.js');
+import { Players } from '../../api/scorekeep/players.js';
+var fileHelper = require('../../helpers/fileHelper.js');
 
 
 export default class AddPlayer extends React.Component {
