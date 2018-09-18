@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'; // ES6
 export default class TitleBar extends React.Component {
     renderSubtitle() {
         if ( this.props.subtitle ) {
-            return <h2> {this.props.subtitle} </h2>
+            return <h2 className="title-bar__subtitle"> {this.props.subtitle} </h2>
         } //explicitly returned 'undefined' or 'null', hence not rendered
     }
     render() {
