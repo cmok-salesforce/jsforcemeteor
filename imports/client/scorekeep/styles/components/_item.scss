@@ -4,3 +4,18 @@
     margin-bottom: 1.3rem;
     padding: 1.3rem;
 }
+
+//BEM Block Element Mofifier
+//__ is a nming covention for element
+.item__message {
+    color: purple;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center
+}
+
+//-- is a naming convention for modifier
+.item__message--empty {
+    color: #999999;
+}

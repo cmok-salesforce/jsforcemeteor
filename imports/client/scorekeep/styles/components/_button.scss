@@ -1,0 +1,16 @@
+.button {
+    border:1px solid #555555;
+    color:#555555;
+    cursor: pointer;
+    font-weight:600;
+    margin-left: 1.3rem;
+    outline:none; // blue around component like button selection
+    padding:1.3rem;
+}
+
+//modifier
+.button--round {
+    border-radius: 50%; //create circle 
+    height: 4rem;
+    width: 4rem;
+}

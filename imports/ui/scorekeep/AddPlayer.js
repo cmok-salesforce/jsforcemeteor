@@ -26,13 +26,13 @@ export default class AddPlayer extends React.Component {
     }
     render() {
         return (
-            <div className='item'>
+            <div className="item">
                 {/* WARNING: do not provide () after the handleSubmit, otherwise event is not defined 
                 Empty arrow function
                 */}
                 <form onSubmit={ this.handleSubmit.bind(this) }>
                     <input type="text" name="playerName" placeholder="Player name" />
-                    <button>Add Player</button>
+                    <button className="button">Add Player</button>
                 </form>
             </div>
         );
