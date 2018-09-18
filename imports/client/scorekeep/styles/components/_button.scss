@@ -1,4 +1,5 @@
 .button {
+    background: white;
     border:1px solid #555555;
     color:#555555;
     cursor: pointer;
@@ -6,6 +7,16 @@
     margin-left: 1.3rem;
     outline:none; // blue around component like button selection
     padding:1.3rem;
+    transition: background .2s ease, transform .2s ease; //visual effect to avoid button "jumps"
+    //when we hover or focus on button
+    &:hover, &:focus {
+        background: orange;
+    }
+    // when the button is active e.g when user click, button become blue
+    &:active {
+        background:blue;
+        transform: scale(1.2); //transition size e.g increase by 1.2
+    }
 }
 
 //modifier
