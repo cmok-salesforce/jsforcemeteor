@@ -2,6 +2,8 @@
 * meteor add nourharidy:ssl
 * meteor npm install --save babel-runtime react react-dom classnames
 * meteor npm install --save prop-types
+* meteor add fourseven:scss
+
 
 # Node Packages Global
 * npm install nodemon -g
@@ -15,7 +17,6 @@
 * npm install commander --save
 * npm install pjson --save
 * npm install browserfs --save
-
 
 
 # MongoDB
@@ -37,3 +38,4 @@
 * https://babeljs.io/repl
 * https://docs.mongodb.com/manual/reference/method/cursor.sort/
 * https://docs.meteor.com/api/collections.html#sortspecifiers
+* https://sass-lang.com/

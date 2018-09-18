@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
-import { Players } from '../../imports/api/scorekeep/players.js';
+import { Players } from '../imports/api/scorekeep/players.js';
 import { Tracker } from 'meteor/tracker';
 
-import App from '../../imports/ui/scorekeep/App.js';
+import App from '../imports/ui/scorekeep/App.js';
 //import { greetUser, writeFileSync } from '../imports/helpers/fileHelper.js';
-var fileHelper = require('../../imports/helpers/fileHelper.js');
+var fileHelper = require('../imports/helpers/fileHelper.js');
 
 Meteor.startup( () => {
   //DDP Synch with MonDB on server side 

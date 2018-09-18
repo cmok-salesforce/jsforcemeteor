@@ -1,0 +1,25 @@
+/* reset all style */
+* {
+  margin:0;
+  padding:0;
+}
+
+html {
+  font-size: 62.5%;  // 62.5% of default font value: 16 * .625 = 10 pixels because 16 pixel is the default font value
+}
+
+body {
+    background: #f2f2f2;
+    color: #555555;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.4rem; //relative root em instead of pixel === 24 pixel
+}
+
+@import './components/title-bar';
+@import './components/wrapper';
+@import './components/item';

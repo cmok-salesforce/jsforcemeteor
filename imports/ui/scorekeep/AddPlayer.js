@@ -26,7 +26,7 @@ export default class AddPlayer extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className='item'>
                 {/* WARNING: do not provide () after the handleSubmit, otherwise event is not defined 
                 Empty arrow function
                 */}

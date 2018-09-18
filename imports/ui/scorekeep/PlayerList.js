@@ -7,7 +7,11 @@ import Player from './Player.js';
 export default class PlayerList extends React.Component {
     renderPlayers() {
         if (this.props.players.length===0) {
-            return <p>Add your first player to get started</p>; 
+            return (
+                <div className='item'>
+                    <p>Add your first player to get started</p>
+                </div>
+            );
         } else {
             return this.props.players.map((player) => {
                 //WARNING: Each child in an array or iterator should have a unique "key" prop.
