@@ -44,3 +44,4 @@
 * https://sass-lang.com/
 * https://github.com/joshwcomeau/react-flip-move
 * http://numeraljs.com/
+* http://sass-lang.com/documentation/Sass/Script/Functions.html

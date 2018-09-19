@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'; // ES6
 import FlipMove from 'react-flip-move'; // ES6
+import React from 'react';
+
 //var PropTypes = require('prop-types'); // ES5 with npm
 
 import Player from './Player.js';
