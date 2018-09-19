@@ -5,6 +5,9 @@
 * meteor add fourseven:scss
 * meteor npm install react-flip-move
 * meteor npm install numeral --save
+* meteor npm install react react-dom react-router --save
+* meteor npm install --save react-router-dom
+
 
 
 # Node Packages Global
@@ -45,3 +48,4 @@
 * https://github.com/joshwcomeau/react-flip-move
 * http://numeraljs.com/
 * http://sass-lang.com/documentation/Sass/Script/Functions.html
+* https://github.com/ReactTraining/react-router

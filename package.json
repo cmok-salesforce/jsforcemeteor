@@ -22,9 +22,11 @@
     "progress": "^2.0.0",
     "prop-types": "^15.6.2",
     "properties-reader": "0.0.16",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-flip-move": "^3.0.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "yargs": "^12.0.2"
   }
 }
