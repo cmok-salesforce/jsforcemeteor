@@ -5,7 +5,7 @@ import { Players, calculatePlayerPositions } from '../imports/api/scorekeep/play
 import { Tracker } from 'meteor/tracker';
 
 //import {Router, Route, browserHistory} from 'react-router';
-import { BrowserRouter, Route, Switch, Redirect, browserHistory } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect, browserHistory } from 'react-router-dom';
 
 
 //short-lnk
@@ -19,12 +19,14 @@ import App from '../imports/ui/scorekeep/App.js';
 //import { greetUser, writeFileSync } from '../imports/helpers/fileHelper.js';
 var fileHelper = require('../imports/helpers/fileHelper.js');
 
+//window.browserHistory = browserHistory;
+
 const routes = (
   <BrowserRouter history={browserHistory}>
     <Switch>
-      <Route path="/links" component={Link} />
-      <Route path="/signup" component={Signup} />
-      <Route exact path="/" component={Login} />
+      <Route path="/links" component={Link} history={browserHistory}/>
+      <Route path="/signup" component={Signup} history={browserHistory}/>
+      <Route exact path="/" component={Login} history={browserHistory}/>
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>

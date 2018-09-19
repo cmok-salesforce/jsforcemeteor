@@ -39,6 +39,14 @@
     db.players.find().sort({score:-1}) //sorting ascending
 ```
 
+# BrowserHistory console
+``
+browserHistory.push('/url');
+browserHistory.goBack();
+browserHistory.goForward();
+browserHistory.go(-2);
+``
+
 # Reference
 * https://reactjs.org/docs/typechecking-with-proptypes.html
 * https://babeljs.io/repl
@@ -49,3 +57,5 @@
 * http://numeraljs.com/
 * http://sass-lang.com/documentation/Sass/Script/Functions.html
 * https://github.com/ReactTraining/react-router
+* https://developer.mozilla.org/en-US/docs/Web/API/History
+* https://github.com/ReactTraining/history
