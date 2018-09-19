@@ -24,9 +24,9 @@ var fileHelper = require('../imports/helpers/fileHelper.js');
 const routes = (
   <BrowserRouter history={browserHistory}>
     <Switch>
-      <Route path="/links" component={Link} history={browserHistory}/>
-      <Route path="/signup" component={Signup} history={browserHistory}/>
-      <Route exact path="/" component={Login} history={browserHistory}/>
+      <Route path="/links" component={Link} />
+      <Route path="/signup" component={Signup} />
+      <Route exact path="/" component={Login} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
