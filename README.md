@@ -4,6 +4,7 @@
 * meteor npm install --save prop-types
 * meteor add fourseven:scss
 * meteor npm install react-flip-move
+* meteor npm install numeral --save
 
 
 # Node Packages Global
@@ -18,6 +19,7 @@
 * npm install commander --save
 * npm install pjson --save
 * npm install browserfs --save
+* 
 
 
 # MongoDB
@@ -41,3 +43,4 @@
 * https://docs.meteor.com/api/collections.html#sortspecifiers
 * https://sass-lang.com/
 * https://github.com/joshwcomeau/react-flip-move
+* http://numeraljs.com/

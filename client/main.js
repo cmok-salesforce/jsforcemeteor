@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
-import { Players } from '../imports/api/scorekeep/players.js';
+import { Players, calculatePlayerPositions } from '../imports/api/scorekeep/players.js';
 import { Tracker } from 'meteor/tracker';
 
 import App from '../imports/ui/scorekeep/App.js';
@@ -13,10 +13,11 @@ Meteor.startup( () => {
   Tracker.autorun( () => {
     //with sorting: first {} == ALL records, second is sort criteria
     let players = Players.find({}, {sort:{score: -1}}).fetch();
+    let positionedPlayers = calculatePlayerPositions(players);
     console.log('*** playerList:', players);
     let title = 'Score Keep';
 
-    ReactDOM.render(<App title={title} players={players}/>, document.getElementById('app'));
+    ReactDOM.render(<App title={title} players={positionedPlayers}/>, document.getElementById('app'));
   });
 
 });
