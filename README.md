@@ -3,6 +3,7 @@
 * meteor npm install --save babel-runtime react react-dom classnames
 * meteor npm install --save prop-types
 * meteor add fourseven:scss
+* meteor npm install react-flip-move
 
 
 # Node Packages Global
@@ -39,3 +40,4 @@
 * https://docs.mongodb.com/manual/reference/method/cursor.sort/
 * https://docs.meteor.com/api/collections.html#sortspecifiers
 * https://sass-lang.com/
+* https://github.com/joshwcomeau/react-flip-move

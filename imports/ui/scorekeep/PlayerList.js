@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'; // ES6
+import FlipMove from 'react-flip-move'; // ES6
 //var PropTypes = require('prop-types'); // ES5 with npm
 
-import React from 'react';
 import Player from './Player.js';
 
 export default class PlayerList extends React.Component {
@@ -22,7 +22,9 @@ export default class PlayerList extends React.Component {
     render() {
         return (
             <div>
-                {this.renderPlayers()}
+                <FlipMove maintainContainerHeight="true">
+                    {this.renderPlayers()}
+                </FlipMove>
             </div>
         );
     }
