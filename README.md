@@ -7,7 +7,7 @@
 * meteor npm install numeral --save
 * meteor npm install react react-dom react-router --save
 * meteor npm install --save react-router-dom
-
+* meteor add accounts-password
 
 
 # Node Packages Global
@@ -37,9 +37,13 @@
     db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$set: {score:99}})
     db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$inc: {score:1}})  // increment score by +1
     db.players.find().sort({score:-1}) //sorting ascending
+
+    db.users.find()
+    
 ```
 
 # BrowserHistory console
+window.browserHistory = browserHistory;
 ``
 browserHistory.push('/url');
 browserHistory.goBack();
@@ -47,6 +51,13 @@ browserHistory.goForward();
 browserHistory.go(-2);
 ``
 
+# Browser console with Meteor
+```
+require('meteor/meteor').Meteor.userId()
+require('meteor/meteor').Meteor.user()
+require('meteor/accounts-base').Accounts
+require('meteor/accounts-base').Accounts.logout()
+```
 # Reference
 * https://reactjs.org/docs/typechecking-with-proptypes.html
 * https://babeljs.io/repl
@@ -59,3 +70,4 @@ browserHistory.go(-2);
 * https://github.com/ReactTraining/react-router
 * https://developer.mozilla.org/en-US/docs/Web/API/History
 * https://github.com/ReactTraining/history
+* https://docs.meteor.com/api/passwords.html
