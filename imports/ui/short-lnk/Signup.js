@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
-import {Accounts} from 'metor/accounts-base';
+import {Accounts} from 'meteor/accounts-base';
 
 export default class Signup extends React.Component{
     constructor(props) {
