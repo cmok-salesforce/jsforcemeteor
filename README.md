@@ -71,3 +71,8 @@ require('meteor/accounts-base').Accounts.logout()
 * https://developer.mozilla.org/en-US/docs/Web/API/History
 * https://github.com/ReactTraining/history
 * https://docs.meteor.com/api/passwords.html
+
+
+# PHP Server
+php -S localhost:8885
+alias server='open http://localhost:8000 & python -m SimpleHTTPServer'

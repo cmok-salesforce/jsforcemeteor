@@ -14,6 +14,10 @@ import Link from '../imports/ui/short-lnk/Link';
 import NotFound from '../imports/ui/short-lnk/NotFound';
 import Login from '../imports/ui/short-lnk/Login';
 
+//Salesforce Identity Management System
+import Oauth2wsf from '../imports/ui/identity/Oauth2wsf';
+
+
 
 import App from '../imports/ui/scorekeep/App.js';
 //import { greetUser, writeFileSync } from '../imports/helpers/fileHelper.js';
@@ -25,6 +29,7 @@ const routes = (
   <BrowserRouter history={browserHistory}>
     <Switch>
       <Route path="/links" component={Link} />
+      <Route path="/oauth2wsf" component={Oauth2wsf} />
       <Route path="/signup" component={Signup} />
       <Route exact path="/" component={Login} />
       <Route component={NotFound} />
@@ -32,6 +37,15 @@ const routes = (
   </BrowserRouter>
 );
 
+/* Salesforce Identity Routes*/
+const routesIdentity = (
+  <BrowserRouter history={browserHistory}>
+    <Switch>
+      <Route path="/ciam" component={Oauth2wsf} />
+      <Route component={NotFound} />
+    </Switch>
+  </BrowserRouter>
+);
 
 Meteor.startup( () => {
   //DDP Synch with MonDB on server side 
@@ -47,7 +61,11 @@ Meteor.startup( () => {
     
     //short-lnk application
     //ReactDOM.render(<Signup />, document.getElementById('app'));
-    ReactDOM.render(routes, document.getElementById('app'));
+    //ReactDOM.render(routes, document.getElementById('app'));
+
+    //Salesforce Identity demo application
+    //ReactDOM.render(<Signup />, document.getElementById('app'));
+    ReactDOM.render(routesIdentity, document.getElementById('app'));
   });
 
 });

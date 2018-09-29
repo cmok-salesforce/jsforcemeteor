@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+    <meta charset="UTF-8"/>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <meta name="description" content="Free Web tutorials"/>
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript"/>
+    <meta name="author" content="Chenda Mok"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Chenda Mok Demo</title>
+</head>
+<body>
+    <h1>Counter: <span id="count">0</span></h1>
+    <button id="subtract">Subtract 1</button>
+    <button id="add">Add 1</button>
+    <script type="text/javascript">
+        $('#add').on('click', function(){
+            var counter = $('#count'); //cache this query for reuse
+            var count = parseInt(counter.text());
+            counter.text(count+1);
+        });
+        //the state is store in HTML ---> this is bad ---> ducplicate code
+        $('#subtract').on('click', function () {
+                var counter = $('#count'); //cache this query for reuse
+                var count = parseInt(counter.text());
+                counter.text(count - 1);
+            });
+    </script>
+</body>
+</html>
+
+
+
