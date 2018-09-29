@@ -7,18 +7,21 @@ var TaskApp = React.createClass({
     },
     addTask: function(e) {
         e.preventDefault();
+        var items = this.state.items.concat([this.state.task]);
+        var task = ''
         this.setState(
             {
-                items: this.state.items.concat([this.state.task]),
-                task: ''
+                items,
+                task
             }
         );
     },
 
     onChange: function(e) {
+        var task = e.target.value
         this.setState(
             {
-                task: e.target.value,
+                task,
             }
         );
     },
