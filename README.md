@@ -1,13 +1,27 @@
+# Installing Meteor
+* curl https://install.meteor.com/ | sh
+
+# Meteor Command
+* meteor create HelloWorld
+    * meteor npm install
+    * meteor run
+
 # Meteor Packages
-* meteor add nourharidy:ssl
-* meteor npm install --save babel-runtime react react-dom classnames
-* meteor npm install --save prop-types
-* meteor add fourseven:scss
-* meteor npm install react-flip-move
+* meteor add iron:router (NOT USED)
+  
+* meteor npm install babel-runtime react react-dom classnames --save 
+* meteor npm install prop-types --save
+* meteor add fourseven:scss --save
+* meteor npm install react-flip-move --save
 * meteor npm install numeral --save
 * meteor npm install react react-dom react-router --save
-* meteor npm install --save react-router-dom
+* meteor npm install react-router-dom --save 
+
+* meteor add nourharidy:ssl
+* meteor add accounts-base
 * meteor add accounts-password
+* meteor add pauldowman:dotenv
+
 
 
 # Node Packages Global
