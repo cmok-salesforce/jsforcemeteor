@@ -21,6 +21,8 @@
 * meteor add accounts-base
 * meteor add accounts-password
 * meteor add pauldowman:dotenv
+* meteor add react-meteor-data
+
 
 
 
@@ -51,6 +53,9 @@
     db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$set: {score:99}})
     db.players.update({_id:'WKkrdjoZ5a28F8Hhd'},{$inc: {score:1}})  // increment score by +1
     db.players.find().sort({score:-1}) //sorting ascending
+
+    db.tasks.insert({ text: "Hello world!", createdAt: new Date() });
+    
 
     db.users.find()
     

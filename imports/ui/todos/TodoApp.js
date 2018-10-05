@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { withTracker } from 'meteor/react-meteor-data';
 import Task from './Task.js';
+import {Tasks} from '../../api/todos/tasks';
 
 // App component - represents the whole app
-export default class TodoApp extends Component {
-    getTasks() {
+class TodoApp extends Component {
+    getTasks1() {
         return [
             { _id: 1, text: 'This is task 1' },
             { _id: 2, text: 'This is task 2' },
@@ -11,13 +13,21 @@ export default class TodoApp extends Component {
         ];
     }
 
+    getTasks() {
+         return tasks.map((task) => {
+             return task;
+         });
+    }
+
     renderTasks() {
-        return this.getTasks().map((task) => (
+        //return this.getTasks().map((task) => (
+        return this.props.tasks.map((task) => (
             <Task key={task._id} task={task} />
         ));
     }
 
     render() {
+        console.log(this.props.tasks);
         return (
             <div className="container">
                 <header>
@@ -31,3 +41,10 @@ export default class TodoApp extends Component {
         );
     }
 }
+
+export default withTracker(() => {
+    Meteor.subscribe('tasks');
+    return {
+        tasks: Tasks.find({}).fetch(),
+    };
+})(TodoApp);
