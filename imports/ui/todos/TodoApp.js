@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import Task from './Task.js';
 import {Tasks} from '../../api/todos/tasks';
 
 // App component - represents the whole app
 class TodoApp extends Component {
+    handleSubmit(event) {
+        event.preventDefault();
+
+        // Find the text field via the React ref
+        const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
+
+        Tasks.insert({
+            text,
+            createdAt: new Date(), // current time
+        });
+
+        // Clear form
+        ReactDOM.findDOMNode(this.refs.textInput).value = '';
+    }
+        
     getTasks1() {
         return [
             { _id: 1, text: 'This is task 1' },
@@ -33,7 +49,13 @@ class TodoApp extends Component {
                 <header>
                     <h1>Todo List</h1>
                 </header>
-
+                <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
+                    <input
+                        type="text"
+                        ref="textInput"
+                        placeholder="Type to add new tasks"
+                    />
+                </form>
                 <ul>
                     {this.renderTasks()}
                 </ul>
