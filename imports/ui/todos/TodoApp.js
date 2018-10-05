@@ -20,7 +20,7 @@ class TodoApp extends Component {
         // Clear form
         ReactDOM.findDOMNode(this.refs.textInput).value = '';
     }
-        
+
     getTasks1() {
         return [
             { _id: 1, text: 'This is task 1' },
@@ -49,6 +49,7 @@ class TodoApp extends Component {
                 <header>
                     <h1>Todo List</h1>
                 </header>
+                {/* Adding form */}
                 <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
                     <input
                         type="text"
@@ -67,6 +68,6 @@ class TodoApp extends Component {
 export default withTracker(() => {
     Meteor.subscribe('tasks');
     return {
-        tasks: Tasks.find({}).fetch(),
+        tasks: Tasks.find({}, { sort: { createdAt: -1 } }).fetch(),
     };
 })(TodoApp);
