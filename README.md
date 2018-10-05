@@ -24,8 +24,6 @@
 * meteor add react-meteor-data
 
 
-
-
 # Node Packages Global
 * npm install nodemon -g
 

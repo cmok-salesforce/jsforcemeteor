@@ -15,6 +15,6 @@ function handleTodosApp() {
 }
 
 Meteor.startup(() => {
-  console.log('*** SERVER: Meteor.startup');
+  console.log('*** SERVER: Meteor.startup ' + new Date());
   handleTodosApp();
 });
