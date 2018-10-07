@@ -16,12 +16,19 @@
 * meteor npm install numeral --save
 * meteor npm install react react-dom react-router --save
 * meteor npm install react-router-dom --save 
+* meteor npm install cordova-plugin-statusbar --save
+* meteor npm install cordova-plugin-splashscreen --save
+* meteor npm install --save-exact @babel/runtime@7.0.0-beta.55
 
 * meteor add nourharidy:ssl
 * meteor add accounts-base
 * meteor add accounts-password
 * meteor add pauldowman:dotenv
 * meteor add react-meteor-data
+
+## IOS Mobile Support  ---> On Mac Only
+* meteor add-platform ios
+* [Mobile pre-requisite](https://guide.meteor.com/mobile.html#installing-prerequisites)
 
 
 # Node Packages Global

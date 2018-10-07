@@ -15,6 +15,8 @@
     "browserfs": "^1.4.3",
     "classnames": "^2.2.6",
     "commander": "^2.18.0",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
     "dotenv": "^6.0.0",
     "jsforce": "^1.9.1",
     "meteor-node-stubs": "^0.4.1",
